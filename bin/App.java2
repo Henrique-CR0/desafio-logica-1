@@ -1,9 +1,10 @@
-public class index {
-   public static void main(String[] args) {
+public class App {
+    public static void main(String[] args) {
         exibirNivelJogador(150, 20);
         exibirNivelJogador(5, 3);
         exibirNivelJogador(60, 15);
     }
+
     public static String calcularNivelRankeado(int vitorias, int derrotas) {
         int saldoVitorias = vitorias - derrotas;
         String nivel;
@@ -23,10 +24,12 @@ public class index {
         } else {
             nivel = "Imortal";
         }
+
         return "O Herói tem de saldo de **" + saldoVitorias + "** está no nível de **" + nivel + "**";
     }
+
     public static void exibirNivelJogador(int vitorias, int derrotas) {
         String mensagem = calcularNivelRankeado(vitorias, derrotas);
         System.out.println(mensagem);
-    } 
+    }
 }
